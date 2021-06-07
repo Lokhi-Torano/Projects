@@ -1,9 +1,7 @@
-from kora.selenium import wd
+from selenium import webdriver as wd
 from bs4 import BeautifulSoup as bs
 import time
 import matplotlib.pyplot as plt
- 
- 
 def temp_plot(min_temp_list,max_temp_list):
   date=[]
   min_temp=min_temp_list
@@ -22,8 +20,6 @@ def temp_plot(min_temp_list,max_temp_list):
   plt.plot(date, max_temp, color='red', linestyle='dashed', linewidth = 3, label='maximum temperature',marker='o', markerfacecolor='blue', markersize=12) 
   plt.legend()
   plt.show()
- 
- 
 def correction(min_temp,max_temp):
   ifcl = int(input("You Wanna Change List Items (1.Yes,2.No) : "))
   if ifcl == 1:
@@ -45,9 +41,7 @@ def correction(min_temp,max_temp):
       correction(min_temp,max_temp)
   else:
     pass
- 
- 
-def date_cal(startdate,enddate):
+ def date_cal(startdate,enddate):
     startd = startdate
     endd = enddate
     startdate_list = startd.split("-")
