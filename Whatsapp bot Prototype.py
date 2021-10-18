@@ -45,4 +45,4 @@ timer()
 
 
 while True:
-    attack()
+    attack()1
